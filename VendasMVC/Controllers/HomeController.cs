@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using VendasMVC.Models;
+using VendasMVC.Models.ViewModels;
 
 namespace VendasMVC.Controllers
 {
@@ -17,7 +17,7 @@ namespace VendasMVC.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Message"] = "VendasMVC com C#";
 
             return View();
         }
