@@ -22,6 +22,7 @@ namespace VendasMVC.Services
 
         public void Insert(Seller seller)
         {
+            seller.Department = _context.Department.First();
             _context.Add(seller);
             _context.SaveChanges();
         }
