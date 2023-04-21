@@ -20,10 +20,9 @@ namespace VendasMVC.Services
             return _context.Seller.ToList();
         }
 
-        public void Insert(Seller seller)
+        public void Insert(Seller obj)
         {
-            seller.Department = _context.Department.First();
-            _context.Add(seller);
+            _context.Add(obj);
             _context.SaveChanges();
         }
     }
