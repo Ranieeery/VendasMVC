@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace VendasMVC.Services.Exception
 {
     public class IntegrityException : ApplicationException

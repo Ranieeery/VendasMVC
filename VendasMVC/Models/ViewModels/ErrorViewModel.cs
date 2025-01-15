@@ -1,5 +1,3 @@
-using System;
-
 namespace VendasMVC.Models.ViewModels
 {
     public class ErrorViewModel

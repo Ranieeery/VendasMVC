@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using VendasMVC.Models;
 
@@ -61,6 +58,7 @@ namespace VendasMVC.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(department);
         }
 
@@ -77,6 +75,7 @@ namespace VendasMVC.Controllers
             {
                 return NotFound();
             }
+
             return View(department);
         }
 
@@ -110,8 +109,10 @@ namespace VendasMVC.Controllers
                         throw;
                     }
                 }
+
                 return RedirectToAction(nameof(Index));
             }
+
             return View(department);
         }
 

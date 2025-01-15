@@ -1,14 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace VendasMVC.Models
 {
     public class VendasMVCContext : DbContext
     {
-        public VendasMVCContext (DbContextOptions<VendasMVCContext> options)
+        public VendasMVCContext(DbContextOptions<VendasMVCContext> options)
             : base(options)
         {
         }

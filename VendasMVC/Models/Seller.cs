@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
-using VendasMVC.Models.ViewModels;
 using System.ComponentModel.DataAnnotations;
 
 namespace VendasMVC.Models
@@ -32,15 +31,15 @@ namespace VendasMVC.Models
         public double BaseSalary { get; set; }
 
         public Department Department { get; set; }
-        [Display(Name = "Departament")]
-        public int DepartmentId { get; set; }
+        [Display(Name = "Departament")] public int DepartmentId { get; set; }
         public ICollection<SalesRecord> Sales { get; set; } = new List<SalesRecord>();
 
         public Seller()
         {
         }
 
-        public Seller(int id, string name, string email, [DataType(DataType.Date)] DateTime birthDate, double baseSalary, Department department)
+        public Seller(int id, string name, string email, [DataType(DataType.Date)] DateTime birthDate,
+            double baseSalary, Department department)
         {
             Id = id;
             Name = name;
@@ -62,7 +61,8 @@ namespace VendasMVC.Models
 
         public double TotalSales(DateTime initial, DateTime final)
         {
-            return Sales.Where(salesRecord => salesRecord.Date >= initial && salesRecord.Date <= final).Sum(salesRecord => salesRecord.Amount);
+            return Sales.Where(salesRecord => salesRecord.Date >= initial && salesRecord.Date <= final)
+                .Sum(salesRecord => salesRecord.Amount);
         }
     }
 }

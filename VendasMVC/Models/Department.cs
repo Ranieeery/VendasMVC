@@ -20,7 +20,7 @@ namespace VendasMVC.Models
             Id = id;
             Name = name;
         }
-         
+
         public void AddSeller(Seller seller)
         {
             Sellers.Add(seller);

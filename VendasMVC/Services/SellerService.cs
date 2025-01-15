@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using VendasMVC.Models;
+﻿using VendasMVC.Models;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
@@ -54,6 +52,7 @@ namespace VendasMVC.Services
             {
                 throw new NotFoundException("Id not found");
             }
+
             try
             {
                 _context.Update(obj);
