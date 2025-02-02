@@ -1,6 +1,6 @@
 # VendasMVC Application
 
-PVendasMVC is a web application built with ASP.NET Core and Entity Framework Core. It manages sales records, sellers,
+VendasMVC is a web application built with ASP.NET Core and Entity Framework Core. It manages sales records, sellers,
 and departments.
 
 ## Prerequisites
